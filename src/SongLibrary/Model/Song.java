@@ -1,4 +1,4 @@
-package SongLibrary;
+package SongLibrary.Model;
 
 public class Song {
 
