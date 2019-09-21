@@ -22,3 +22,5 @@
 
 # IntelliJ
 out/
+.idea/misc.xml
+.idea/libraries/lib.xml
