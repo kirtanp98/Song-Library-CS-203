@@ -1,8 +1,68 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<GridPane fx:controller="SongLibrary.View.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-</GridPane>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="400.0" minWidth="747.0" prefHeight="400.0" prefWidth="747.0" style="-fx-background-color: #263238;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SongLibrary.View.Controller">
+   <children>
+      <HBox layoutX="8.0" layoutY="7.0" prefHeight="385.0" prefWidth="732.0" spacing="6.0">
+         <children>
+            <ListView fx:id="songlist" prefHeight="370.0" prefWidth="230.0" style="-fx-background-color: #455A64;" />
+            <HBox prefHeight="370.0" prefWidth="494.0" spacing="6.0">
+               <children>
+                  <VBox prefHeight="370.0" prefWidth="213.0" spacing="40.0" style="-fx-background-color: #37474F;">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Details" textAlignment="CENTER" wrappingWidth="230.0" />
+                        <Text fx:id="name" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Song Name" textAlignment="CENTER" wrappingWidth="230.0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="artist" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Artist" textAlignment="CENTER" wrappingWidth="230.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="album" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Album" textAlignment="CENTER" wrappingWidth="230.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="year" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Year" textAlignment="CENTER" wrappingWidth="230.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="370.0" prefWidth="250.0" spacing="20.0">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" textAlignment="CENTER" wrappingWidth="245.0" />
+                        <TextField fx:id="nameField" style="-fx-background-color: #ECEFF1;" />
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Artist" textAlignment="CENTER" wrappingWidth="245.0" />
+                        <TextField fx:id="artistField" style="-fx-background-color: #ECEFF1;" />
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Album" textAlignment="CENTER" wrappingWidth="245.0" />
+                        <TextField fx:id="albumField" style="-fx-background-color: #ECEFF1;" />
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Year" textAlignment="CENTER" wrappingWidth="245.0" />
+                        <TextField fx:id="yearField" style="-fx-background-color: #ECEFF1;" />
+                        <HBox prefHeight="31.0" prefWidth="250.0" spacing="61.0">
+                           <children>
+                              <Button fx:id="add" mnemonicParsing="false" text="Add" onAction="#add" />
+                              <Button fx:id="edit" mnemonicParsing="false" text="Edit" onAction="#edit" />
+                              <Button fx:id="delete" mnemonicParsing="false" text="Delete" onAction="#delete" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
